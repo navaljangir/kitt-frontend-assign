@@ -34,7 +34,7 @@ export function FlightsSearchResult() {
          return airport.code === val
       })
    }
-   const [sideBarOpen, setSideBarOpen] = useState(true);
+   const [sideBarOpen, setSideBarOpen] = useState(false);
    useEffect(() => {
       toast.message('Search For 14 Oct 2024 To View Better', { duration: 2000 })
    }, [])
