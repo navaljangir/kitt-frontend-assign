@@ -23,7 +23,6 @@ export function FlightLoading() {
       </div>
     </div>
 
-    {/* Route and Time Difference Skeleton */}
     <div className="flex items-center">
       <div className="flex flex-col">
         <Skeleton className="w-20 h-4 rounded mb-2 bg-gradient-to-r from-gray-300 to-gray-100" />
@@ -31,8 +30,6 @@ export function FlightLoading() {
       </div>
     </div>
   </div>
-
-  {/* Stops Skeleton */}
   <div className="ml-20 mr-10 text-nowrap flex items-center w-20">
     <Skeleton className="w-full h-4 rounded bg-gradient-to-r from-gray-300 to-gray-100" />
   </div>

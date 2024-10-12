@@ -26,9 +26,6 @@ export function FlightSearchNavBar() {
     const destination = airports.find((airport) => {
         return airport.code === destCode
     })
-    // if (getReturnDate) {
-    //     returnDate = new Date(getReturnDate);
-    // }
     useEffect(()=>{
         const departureDate =  new Date(path.get('dDate') || new Date())
         departureDate.setHours(0 ,0 , 0, 0)
@@ -53,7 +50,6 @@ export function FlightSearchNavBar() {
         <div>
 <div className="flex justify-between mx-56 py-5" onClick={()=> setNavBarOpen(!navBarOpen)}>
             <div className="border-2 px-6 py-3 rounded-full cursor-pointer flex gap-3">
-                {/* Search Boxes */}
                 <div className="flex  w-52 whitespace-nowrap gap-2">
                     <div className="font-bold">
                         {flightSearchVal.srcCode}
@@ -76,7 +72,6 @@ export function FlightSearchNavBar() {
                     <div>
                         {format(flightSearchVal.departureDate, 'MMMM dd')}
                     </div>
-                    {/* Return Date If There */}
                     {getReturnDate && <div>
                         - {format(flightSearchVal.returnDate || new Date(), 'MMMM dd')}
                     </div>}
