@@ -2,12 +2,13 @@
 import { RecoilRoot } from "recoil";
 import { FlightSearchNavBar } from "./FlightSearchResult/FlightSearchNavBar";
 import { FlightsSearchResult } from "./FlightSearchResult/FlightSearchResult";
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { FlightLoading } from "./FlightSearchResult/FlightLoading";
 import { LineAnimation } from "@/components/ui/lineAnimation";
 import { Spinner } from "@/components/ui/Spinner";
 import { Check } from "./SVG";
 import Image from "next/image";
+import { FlightNavBarMain } from "./FlightNavBarMainComp";
 
 export function FlightResult() {
     const [isLoading, setIsLoading] = useState(true)
@@ -30,7 +31,7 @@ export function FlightResult() {
     } ,[])
     return <RecoilRoot>
         <div className="border-b-2">
-            <FlightSearchNavBar />
+            <FlightNavBarMain/>
         </div>
         {isLoading ? (
             <div>

@@ -2,9 +2,8 @@
 'use client'
 
 import { useRecoilValue } from "recoil"
-// import { FlightLoading } from "./FlightLoading"
 import { flightSearchAtom } from "@/app/lib/atoms/atom"
-import { airports, companyImageURL, flightData } from "@/app/lib/airportData";
+import {  companyImageURL, flightData } from "@/app/lib/airportData";
 import { useEffect, useState } from "react";
 import { differenceInDays, differenceInMinutes, format } from "date-fns";
 import { toast } from "sonner";
@@ -28,12 +27,6 @@ export function FlightsSearchResult() {
    const flightSearchVal = useRecoilValue(flightSearchAtom);
    const { srcCode, destCode, departureDate } = flightSearchVal
    const [flights, setFlights] = useState<flightDataInterface[]>([]);
-   const [flightChoosen, setFlightChoosen] = useState({});
-   const getAirpot = (val: string) => {
-      airports.find((airport) => {
-         return airport.code === val
-      })
-   }
    const [sideBarOpen, setSideBarOpen] = useState(false);
    useEffect(() => {
       toast.message('Search For 14 Oct 2024 To View Better', { duration: 2000 })
