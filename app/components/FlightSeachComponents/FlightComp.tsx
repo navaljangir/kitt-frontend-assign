@@ -18,8 +18,6 @@ export function FlightComp({toggleNavBar} : {toggleNavBar? : ()=> void}) {
     const departureDate = searchFlightVal.departureDate
     const returnDate = searchFlightVal.returnDate
     const router = useRouter();
-    const currDate = new Date()
-    // const toast = toast('')
     const searchFlight = () => {
         if (!searchFlightVal.source || !searchFlightVal.destination) {
             toast.error('Select the Source and Destination Both', {
