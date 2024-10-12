@@ -1,6 +1,5 @@
 'use client'
 import { RecoilRoot } from "recoil";
-import { FlightSearchNavBar } from "./FlightSearchResult/FlightSearchNavBar";
 import { FlightsSearchResult } from "./FlightSearchResult/FlightSearchResult";
 import {  useEffect, useState } from "react";
 import { FlightLoading } from "./FlightSearchResult/FlightLoading";
